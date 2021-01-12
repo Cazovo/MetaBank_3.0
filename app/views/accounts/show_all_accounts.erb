@@ -5,3 +5,17 @@
   <h5><%=account.name%></h5>
   <%=account.accounts.each do |account|
 </div>
+
+   <table>
+    <tr>
+    <th>name</th>
+    <th>type</th>
+    </tr>
+    <%accounts.each do |account%>
+      <tr>
+        <td><%=account.name%></td>
+        <td><%=account.type%></td>
+      </tr>
+    <% end %>
+    </table>
+</div>

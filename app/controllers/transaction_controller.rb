@@ -1,5 +1,5 @@
 require 'sinatra'
-class TransactionsController < ApplicationController
+class TransactionController < ApplicationController
 
    get '/transactions/:account_id' do 
       if logged_in?

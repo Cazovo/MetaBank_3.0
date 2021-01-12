@@ -10,37 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_10_052720) do
-
-  create_table "account_type", force: :cascade do |t|
-    t.string "type_id"
-    t.string "name"
-    t.string "rate"
-  end
+ActiveRecord::Schema.define(version: 2021_01_12_184959) do
 
   create_table "accounts", force: :cascade do |t|
-    t.string "acc_id"
-    t.string "users_id"
+    t.integer "user_id"
     t.string "name"
     t.datetime "created", null: false
     t.string "type"
   end
 
   create_table "transactions", force: :cascade do |t|
-    t.string "trans_id"
-    t.string "account_id"
-    t.string "amount"
-    t.string "type"
+    t.integer "account_id"
+    t.integer "amount"
+    t.string "notes"
     t.datetime "date", null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "user_id"
     t.string "first_name"
     t.string "last_name"
     t.string "street_name"
     t.string "city"
-    t.string "zip_code"
+    t.integer "zip_code"
     t.string "number"
     t.datetime "birth_date"
     t.string "gender"
